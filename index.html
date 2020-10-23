@@ -70,7 +70,7 @@
       <section class="slider">
         <h2 class="visually-hidden">Подборка товаров</h2>
         <ul class="slider-list">
-          <li class="slider-item">
+          <li class="slider-item slider-item-current">
             <h3 class="visually-hidden">Селфи-палка</h3>
             <img src="img/slider-sticks.png" alt="Три селфи-палки длиной восемь метров" width="384" height="486">
             <p class="slider-slogan">Делай селфи, как Бен Стиллер!</p>
@@ -140,32 +140,34 @@
         </ul>
       </section>
       <section class="services">
-        <h2 class="visually-hidden">Услуги нашего магазина</h2>
-        <ul class="services-buttons-list">
-          <li>
-            <a class="button services-button" href="#">Доставка</a>
-          </li>
-          <li>
-            <a class="button services-button" href="#">Гарантия</a>
-          </li>
-          <li>
-            <a class="button services-button" href="#">Кредит</a>
-          </li>
-        </ul>
-        <ul class="services-list">
-          <li>
-            <h3 class="services-title">Доставка</h3>
-            <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          </li>
-          <li>
-            <h3 class="services-title">Гарантия</h3>
-            <p class="services-text">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно.</p>
-          </li>
-          <li>
-            <h3 class="services-title">Кредит</h3>
-            <p class="services-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
+        <div class="services-container">
+          <h2 class="visually-hidden">Услуги нашего магазина</h2>
+          <ul class="services-buttons-list">
+            <li>
+              <a class="button services-button" href="#">Доставка</a>
+            </li>
+            <li>
+              <a class="button services-button" href="#">Гарантия</a>
+            </li>
+            <li>
+              <a class="button services-button" href="#">Кредит</a>
+            </li>
+          </ul>
+          <ul class="services-list">
+            <li class="services-item services-item-current">
+              <h3 class="services-title">Доставка</h3>
+              <p class="services-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </li>
+            <li class="services-item">
+              <h3 class="services-title">Гарантия</h3>
+              <p class="services-text">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно.</p>
+            </li>
+            <li class="services-item">
+              <h3 class="services-title">Кредит</h3>
+              <p class="services-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br> условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="partners">
         <h2 class="visually-hidden">Наши партнеры</h2>
@@ -184,74 +186,78 @@
           </li>
         </ul>
       </section>
-      <section class="about-us">
-        <h2 class="about-us-heading">О нас</h2>
-        <p class="about-us-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="about-us-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="about-us-transport-list">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="button about-us-button" href="blank.html">Подробнее о нас</a>
-      </section>
-      <section class="contacts">
-        <h2 class="contacts-heading">Контакты</h2>
-        <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="img/map.jpg" alt="Офис магазина по адресу город Москва, улица строителей, дом 15" width="560" height="222">
-        <a class="button contacts-button" href="blank.html">Напишите нам</a>
-      </section>
+      <div class="about-contacts-columns">
+        <section class="about-us">
+          <h2 class="about-us-heading">О нас</h2>
+          <p class="about-us-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="about-us-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul class="about-us-transport-list">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="button about-us-button" href="blank.html">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+          <h2 class="contacts-heading">Контакты</h2>
+          <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <img src="img/map.jpg" alt="Офис магазина по адресу город Москва, улица строителей, дом 15" width="560" height="222">
+          <a class="button contacts-button" href="blank.html">Напишите нам</a>
+        </section>
+      </div>
     </main>
     <footer class="page-footer">
-      <div class="footer-navigation">
-        <a class="footer-logo">
-          <img src="img/logo-device-footer.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
-        </a>
-        <ul class="footer-user-navigation">
-          <li>
-            <a class="footer-user-navigation-link" href="blank.html">Войти</a>
-          </li>
-          <li>
-            <a class="footer-user-navigation-link" href="blank.html">Сравнить</a>
-          </li>
-          <li>
-            <a class="footer-user-navigation-link" href="blank.html">Корзина</a>
-          </li>
-        </ul>
-        <ul class="footer-site-navigation">
-          <li>
-            <a class="footer-site-navigation-link" href="blank.html">Доставка</a>
-          </li>
-          <li>
-            <a class="footer-site-navigation-link" href="blank.html">Гарантия</a>
-          </li>
-          <li>
-            <a class="footer-site-navigation-link" href="blank.html">Контакты</a>
-          </li>
-        </ul>
+      <div class="container">
+        <div class="footer-navigation">
+          <a class="footer-logo">
+            <img src="img/logo-device-footer.svg" alt="Логотип магазина «Девайс»" width="163" height="35">
+          </a>
+          <ul class="footer-user-navigation">
+            <li>
+              <a class="footer-user-navigation-link" href="blank.html">Войти</a>
+            </li>
+            <li>
+              <a class="footer-user-navigation-link" href="blank.html">Сравнить</a>
+            </li>
+            <li>
+              <a class="footer-user-navigation-link" href="blank.html">Корзина</a>
+            </li>
+          </ul>
+          <ul class="footer-site-navigation">
+            <li>
+              <a class="footer-site-navigation-link" href="blank.html">Доставка</a>
+            </li>
+            <li>
+              <a class="footer-site-navigation-link" href="blank.html">Гарантия</a>
+            </li>
+            <li>
+              <a class="footer-site-navigation-link" href="blank.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Как нас найти</h2>
+          <p class="footer-contacts-text">г. Москва, ул. Строителей, 15</p>
+          <p class="footer-contacts-text">Тел.:
+            <a class="footer-contacts-phone-link" href="tel:+74954959595">+7 (495) 495-95-95</a>
+          </p>
+        </section>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="footer-social-list">
+            <li>
+              <a class="footer-social-link" href="#" aria-label="Фейсбук"></a>
+            </li>
+            <li>
+              <a class="footer-social-link" href="#" aria-label="Инстаграм"></a>
+            </li>
+            <li>
+              <a class="footer-social-link" href="#" aria-label="Твиттер"></a>
+            </li>
+          </ul>
+        </section>
+        <a href="https://https://htmlacademy.ru/intensive/htmlcss" aria-label="Онлайн-курс «Профессиональная вёрстка сайтов»"></a>
       </div>
-      <section class="footer-contacts">
-        <h2 class="visually-hidden">Как нас найти</h2>
-        <p class="footer-contacts-text">г. Москва, ул. Строителей, 15</p>
-        <p class="footer-contacts-text">Тел.:
-          <a class="footer-contacts-phone-link" href="tel:+74954959595">+7 (495) 495-95-95</a>
-        </p>
-      </section>
-      <section class="footer-social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="footer-social-list">
-          <li>
-            <a class="footer-social-link" href="#" aria-label="Фейсбук"></a>
-          </li>
-          <li>
-            <a class="footer-social-link" href="#" aria-label="Инстаграм"></a>
-          </li>
-          <li>
-            <a class="footer-social-link" href="#" aria-label="Твиттер"></a>
-          </li>
-        </ul>
-      </section>
-      <a href="https://https://htmlacademy.ru/intensive/htmlcss" aria-label="Онлайн-курс «Профессиональная вёрстка сайтов»"></a>
     </footer>
   </body>
 </html>
