@@ -46,6 +46,7 @@
   --white-opacity-70: rgba(255, 255, 255, 0.7);
   --special-yellow: #F7E296;
   --special-yellow-dark: #F0C52E;
+  --additional-yellow: #FFC600;
   --basic-dark: #363636;
   --basic-grey-light: #E5E5E5;
   --basic-grey-dark: #DCDCDC;
@@ -668,21 +669,72 @@ img {
 /* FOOTER ======================================================== */
 
 .page-footer {
+  padding: 40px 0 68px;
   background-color: var(--basic-dark);
+}
+
+.footer-container {
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-container::after {
+  content: "";
+  width: 80px;
+  height: 7px;
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  background-color: var(--additional-yellow);
+}
+
+.footer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 87px;
 }
 
 .footer-user-navigation,
 .footer-site-navigation {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.footer-logo {
+  align-self: center;
+}
+
+.footer-navigation-login {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .footer-user-navigation-link {
+  display: block;
+  padding: 6px 0 6px 22px;
+  margin-left: 43px;
   color: var(--white-opacity-70)
 }
 
+.footer-user-navigation-logout {
+  margin-left: 0;
+}
+
+.footer-site-navigation {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
 .footer-site-navigation-link {
+  display: block;
+  padding: 11px 16px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -691,15 +743,34 @@ img {
   color: var(--basic-white);
 }
 
+.footer-contacts {
+  position: relative;
+  bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-contacts-text,
 .footer-contacts-phone-link {
   color: var(--basic-white);
 }
 
+.footer-contacts-text {
+  font-style: normal;
+}
+
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer-social-item {
+  padding: 5px 10px;
 }
 
 .footer-social-link {
@@ -709,6 +780,17 @@ img {
   /*ниже свойства временно, удалить потом*/
   background-color: var(--basic-white);
   border-radius: 50%;
+}
+
+.footer-htmlacademy-link {
+  display: block;
+  width: 27px;
+  height: 34px;
+  position: absolute;
+  bottom: 4px;
+  right: 20px;
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
 }
 
 /* CATALOG ======================================================== */
