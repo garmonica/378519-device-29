@@ -1,4 +1,4 @@
-* {outline: 1px solid deeppink;}
+/** {outline: 1px solid deeppink;}*/
 
 @font-face {
   font-family: "Gilroy";
@@ -475,16 +475,18 @@ img {
 .services-container {
   display: flex;
   width: 1160px;
+  min-height: 388px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .services-buttons-list {
   width: 277px;
-  height: 320px;
+  height: 240px;
   flex-shrink: 0;
   margin: 0;
   padding: 0;
+  padding-top: 80px;
   list-style: none;
   border-right: 7px solid var(--basic-black);
 }
@@ -499,16 +501,35 @@ img {
 
 .services-button {
   width: 160px;
+  margin-bottom: 22px;
+}
+
+.services-button-active,
+.services-button:active {
+  color: var(--special-yellow);
+  background-color: var(--basic-black);
+  cursor: default;
+}
+
+.services-button-active::before,
+.services-button:active::before {
+  width: 280px;
+  height: 100%;
+  top: 0;
+  background: var(--basic-black);
+  cursor: default;
+  transition-duration: 0s;
 }
 
 .services-list {
   margin: 0;
+  margin-left: 116px;
   padding: 0;
   list-style: none;
 }
 
 .services-title {
-  margin: 0;
+  margin: 71px 0 41px;
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -518,8 +539,10 @@ img {
 }
 
 .services-text {
+  width: 570px;
   margin: 0;
   padding: 0;
+  line-height: 30px;
   letter-spacing: 0.1em;
 }
 
