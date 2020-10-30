@@ -1,4 +1,4 @@
-/** {outline: 1px solid deeppink;}*/
+* {outline: 1px solid deeppink;}
 
 @font-face {
   font-family: "Gilroy";
@@ -330,7 +330,9 @@ img {
 
 .slider {
   width: 1160px;
+  min-height: 586px;
   margin: 0 auto;
+  margin-bottom: 20px;
   padding: 0 20px;
 }
 
@@ -368,10 +370,6 @@ img {
 .slider-item-quadrocopter .slider-image {
   margin-top: 82px;
   margin-left: 27px;
-}
-
-.slider-content {
-
 }
 
 .slider-slogan {
@@ -427,10 +425,14 @@ img {
 .popular {
   width: 1160px;
   margin: 0 auto;
+  margin-bottom: 83px;
   padding: 0 20px;
 }
 
 .popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -441,15 +443,50 @@ img {
   letter-spacing: 0.05em;
 }
 
+.popular-link {
+  display: block;
+  position: relative;
+  width: 160px;
+  padding-top: 198px;
+  color: var(--basic-black);
+}
+
+.popular-link::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 0;
+  left: 0;
+  background-color: var(--special-yellow);
+}
+
+.popular-fitness {
+  letter-spacing: normal;
+}
+
+/* Services */
+
 .services {
   position: relative;
   background: linear-gradient(var(--basic-white) 100px, var(--basic-grey-light) 100px);
 }
 
+.services-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .services-buttons-list {
+  width: 277px;
+  height: 320px;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  border-right: 7px solid var(--basic-black);
 }
 
 .services-item {
@@ -458,12 +495,6 @@ img {
 
 .services-item-current {
   display: block;
-}
-
-.services-container {
-  width: 1160px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .services-button {
