@@ -60,6 +60,7 @@ body {
   font-weight: 300;
   font-style: normal;
   color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 a {
@@ -253,7 +254,7 @@ img {
 
 .site-navigation {
   position: relative;
-  padding: 0 60px 35px;
+  padding: 0 60px 20px;
   padding-right: 56px;
   display: flex;
   justify-content: space-between;
@@ -337,6 +338,7 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  background: linear-gradient(var(--special-yellow) 129px, var(--basic-white) 129px);
 }
 
 .slider-item {
@@ -344,11 +346,36 @@ img {
 }
 
 .slider-item-current {
-  display: block;
+  display: flex;
+}
+
+.slider-image-container {
+  text-align: center;
+  margin-right: 40px;
+  width: 560px;
+  flex-shrink: 0;
+}
+
+.slider-image {
+  margin: auto 0;
+}
+
+.slider-item-watch .slider-image {
+  margin-top: 26px;
+  margin-left: 18px;
+}
+
+.slider-item-quadrocopter .slider-image {
+  margin-top: 82px;
+  margin-left: 27px;
+}
+
+.slider-content {
+
 }
 
 .slider-slogan {
-  margin: 0;
+  margin: 93px 0 26px;
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
@@ -357,12 +384,19 @@ img {
 }
 
 .slider-description {
+  width: 471px;
   margin: 0;
+  margin-bottom: 50px;
   padding: 0;
 }
 
 .slider-button {
   width: 220px;
+  margin-bottom: 53px;
+}
+
+.slider-table {
+  border-collapse: collapse;
 }
 
 .slider-table-data td,
@@ -373,14 +407,22 @@ img {
 }
 
 .slider-table-data td {
+  padding-right: 60px;
   font-size: 36px;
   line-height: 42px;
 }
 
 .slider-table-headings th {
+  padding: 15px 0;
   font-size: 13px;
   line-height: 15px;
 }
+
+.slider-item-quadrocopter td {
+  padding-right: 79px;
+}
+
+/* Popular */
 
 .popular {
   width: 1160px;
@@ -401,7 +443,6 @@ img {
 
 .services {
   position: relative;
-  background-image: linear-gradient();
   background: linear-gradient(var(--basic-white) 100px, var(--basic-grey-light) 100px);
 }
 
