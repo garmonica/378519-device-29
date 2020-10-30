@@ -468,6 +468,7 @@ img {
 /* Services */
 
 .services {
+  margin-bottom: 90px;
   position: relative;
   background: linear-gradient(var(--basic-white) 100px, var(--basic-grey-light) 100px);
 }
@@ -546,27 +547,65 @@ img {
   letter-spacing: 0.1em;
 }
 
+/* Partners */
+
 .partners {
   width: 1160px;
   margin: 0 auto;
+  margin-bottom: 86px;
   padding: 0 20px;
 }
 
 .partners-list {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.partners-image {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 20%;
+}
+
+.partners-link:hover .partners-image {
+  filter: none;
+  opacity: 100%;
+}
+
+/* About us */
+
 .about-contacts-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
   width: 1160px;
   margin: 0 auto;
+  margin-bottom: 79px;
   padding: 0 20px;
+}
+
+.about-contacts-column {
+  position: relative;
+  padding-top: 57px;
+}
+
+.about-contacts-column::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 7px;
+  top: 0;
+  left: 0;
+  background-color: var(--basic-black);
 }
 
 .about-us-heading,
 .contacts-heading {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -578,13 +617,20 @@ img {
 .about-us-text,
 .contacts-text {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   line-height: 28px;
 }
 
+.about-us-text {
+  width: 475px;
+}
+
 .about-us-transport-list {
   margin: 0;
+  margin-bottom: 68px;
   padding: 0;
+  padding-top: 7px;
   list-style: none;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -592,9 +638,31 @@ img {
   line-height: 28px;
 }
 
+.about-us-item {
+  position: relative;
+  padding: 15px 32px 0;
+}
+
+.about-us-item::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 26px;
+  left: 0;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-grey-light);
+  border-radius: 50%;
+}
+
 .about-us-button,
 .contacts-button {
   width: 260px;
+}
+
+.contacts-map-link {
+  display: block;
+  margin-bottom: 72px;
 }
 
 /* FOOTER ======================================================== */
