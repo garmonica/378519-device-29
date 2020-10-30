@@ -41,6 +41,7 @@
   --black-opacity-20: rgba(0, 0, 0, 0.2);
   --black-opacity-30: rgba(0, 0, 0, 0.3);
   --black-opacity-50: rgba(0, 0, 0, 0.5);
+  --black-opacity-60: rgba(0, 0, 0, 0.6);
   --basic-white: #FFFFFF;
   --white-opacity-70: rgba(255, 255, 255, 0.7);
   --special-yellow: #F7E296;
@@ -110,7 +111,8 @@ img {
   z-index: -1;
 }
 
-.button:hover::before {
+.button:hover::before,
+.button:focus::before {
   transition-duration: 0.6s;
   height: 100%;
   top: 0;
@@ -134,11 +136,85 @@ img {
   padding: 0 20px;
 }
 
-.main-navigation-container {
+.main-header-logo {
+  position: relative;
+  top: 20px;
+  left: 60px;
+}
+
+.main-header-logo[href]:hover,
+.main-header-logo[href]:focus {
+  opacity: 60%;
+}
+
+.main-header-logo[href]:active {
+  opacity: 30%;
+}
+
+/* User navigation */
+
+.user-navigation {
+  display: flex;
+  padding: 30px 60px;
   background-color: var(--special-yellow);
 }
 
-.user-navigation,
+/* Search */
+
+.navigation-search-container {
+  display: flex;
+  width: 502px;
+  margin-right: 38px;
+}
+
+.navigation-search-input {
+  display: block;
+  width: 356px;
+  margin: 0;
+  padding: 8px 0 4px 38px;
+  background-color: transparent;
+  border: none;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--basic-black);
+  border-bottom: 2px solid transparent;
+}
+
+.navigation-search-input::placeholder {
+  color: var(--black-opacity-30);
+}
+
+.navigation-search-button {
+  opacity: 0;
+  padding: 12px 15px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid var(--basic-black);
+  cursor: pointer;
+}
+
+.navigation-search-input:focus {
+  border-bottom: 2px solid var(--basic-black);
+  outline: none;
+}
+
+.navigation-search-input:focus ~ .navigation-search-button,
+.navigation-search-button:focus {
+  opacity: 1;
+}
+
+.navigation-search-container:focus-within .navigation-search-input {
+  border-bottom: 2px solid var(--basic-black);
+}
+
+/* User navigation list */
+
+.user-navigation-list,
 .site-navigation,
 .dropdown-navigation {
   margin: 0;
@@ -152,20 +228,101 @@ img {
   color: var(--basic-black);
 }
 
+.user-navigation-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user-navigation-login {
+  width: 241px;
+}
+
+.user-navigation-link {
+  padding: 5px 24px;
+  padding-right: 0;
+}
+
+.user-navigation-logout {
+  padding: 5px 17px;
+  padding-right: 0;
+}
+
+/* Site navigation */
+
 .site-navigation {
+  position: relative;
+  padding: 0 60px 35px;
+  padding-right: 56px;
+  display: flex;
+  justify-content: space-between;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background-color: var(--special-yellow);
+}
+
+.site-navigation-catalog {
+  width: 505px;
+}
+
+.site-navigation-item {
+  margin-left: 35px;
+  padding: 6px 0 15px;
+}
+
+.site-navigation-item:first-child {
+  margin-left: 0;
+}
+
+.site-navigation-item:last-child {
+  margin-left: auto;
+}
+
+.dropdown-container {
+  display: none;
+  width: 100%;
+  min-height: 150px;
+  box-sizing: border-box;
+  padding-left: 60px;
+  background-color: var(--special-yellow);
+  position: absolute;
+  top: 42px;
+  left: 0;
 }
 
 .dropdown-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   letter-spacing: normal;
   text-transform: none;
+}
+
+.site-catalog-link {
+  padding-right: 32px;
+}
+
+.site-navigation-catalog:hover .dropdown-container,
+.site-navigation-catalog:focus-within .dropdown-container {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 11px 0 5px;
+  margin-right: 63px;
+}
+
+.dropdown-navigation-link {
+  display: block;
+  margin-bottom: 6px;
+  padding: 5px 0;
 }
 
 /* MAIN ======================================================== */
