@@ -26,10 +26,10 @@
               <a class="user-navigation-link user-navigation-logout" href="blank.html">Выйти</a>
             </li>
             <li>
-              <a class="user-navigation-link" href="blank.html">Сравнить</a>
+              <a class="user-navigation-link user-navigation-link-compare" href="blank.html">Сравнить</a>
             </li>
             <li>
-              <a class="user-navigation-link" href="blank.html">Корзина</a>
+              <a class="user-navigation-link user-navigation-link-cart" href="blank.html">Корзина</a>
             </li>
           </ul>
         </div>
@@ -76,7 +76,7 @@
             <a class="breadcrumbs-link" href="#">Каталог товаров</a>
           </li>
           <li>
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
+            <a class="breadcrumbs-link breadcrumbs-link-current">Моноподы для селфи</a>
           </li>
         </ul>
       </div>
@@ -85,60 +85,56 @@
           <section class="filter">
             <h2 class="filter-heading">Фильтр:</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="filter-price">
-                <legend>Стоимость</legend>
-                <!-- Форма-ползунок диапазон цен -->
-                <div class="range-filter">
-                  <div class="range-controls">
-                    <div class="scale">
-                      <div class="bar"></div>
-                    </div>
+              <fieldset class="filter-fieldset filter-price">
+                <legend class="filter-legend">Стоимость</legend>
+                <div class="filter-price-range">
+                  <div class="scale">
+                    <div class="bar" style="width: 60%; margin-left: 0"></div>
                   </div>
-                  <div class="toggle-min"></div>
-                  <div class="toggle-max"></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 0;"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 57%;"></div>
                 </div>
-                <!-- Форма-ползунок диапазон цен -->
-                <div class="range-output">
+                <div class="filter-range-output">
                   <label class="filter-price-label" for="min-price-field">от</label>
                   <input class="filter-min-price-input" type="number" name="min-price" id="min-price-field" value="0">
                   <label class="filter-price-label" for="max-price-field">до</label>
                   <input class="filter-max-price-input" type="number" name="max-price" id="max-price-field" value="5000">
                 </div>
               </fieldset>
-              <fieldset class="filter-color">
-                <legend>Цвет</legend>
+              <fieldset class="filter-fieldset filter-color">
+                <legend class="filter-legend">Цвет</legend>
                 <ul class="filter-color-list">
                   <li>
-                    <input class="visually-hidden" type="checkbox" name="black" id="filter-black" checked>
+                    <input class="filter-input-checkbox visually-hidden" type="checkbox" name="black" id="filter-black" checked>
                     <label class="filter-color-label" for="filter-black">Чёрный</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" type="checkbox" name="white" id="filter-white">
+                    <input class="filter-input-checkbox visually-hidden" type="checkbox" name="white" id="filter-white">
                     <label class="filter-color-label" for="filter-white">Белый</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" type="checkbox" name="blue" id="filter-blue" checked>
+                    <input class="filter-input-checkbox visually-hidden" type="checkbox" name="blue" id="filter-blue" checked>
                     <label class="filter-color-label" for="filter-blue">Синий</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" type="checkbox" name="red" id="filter-red" checked>
+                    <input class="filter-input-checkbox visually-hidden" type="checkbox" name="red" id="filter-red" checked>
                     <label class="filter-color-label" for="filter-red">Красный</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" type="checkbox" name="pink" id="filter-pink">
+                    <input class="filter-input-checkbox visually-hidden" type="checkbox" name="pink" id="filter-pink">
                     <label class="filter-color-label" for="filter-pink">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter-bluetooth">
-                <legend>Bluetooth</legend>
+              <fieldset class="filter-fieldset filter-bluetooth">
+                <legend class="filter-legend">Bluetooth</legend>
                 <ul class="filter-bluetooth-list">
                   <li>
-                    <input class="visually-hidden" type="radio" name="bluetooth-group" id="filter-yes" value="yes" checked>
+                    <input class="filter-input-radio visually-hidden" type="radio" name="bluetooth-group" id="filter-yes" value="yes" checked>
                     <label class="filter-bluetooth-label" for="filter-yes">Есть</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" type="radio" name="bluetooth-group" id="filter-none" value="none">
+                    <input class="filter-input-radio visually-hidden" type="radio" name="bluetooth-group" id="filter-none" value="none">
                     <label class="filter-bluetooth-label" for="filter-none">Нет</label>
                   </li>
                 </ul>
@@ -151,7 +147,7 @@
               <h2 class="sorting-heading">Сортировка:</h2>
               <ul class="sorting-groups">
                 <li>
-                  <a class="sorting-groups-link sorting-groups-link-current" href="#">По цене</a>
+                  <a class="sorting-groups-link sorting-groups-link-current">По цене</a>
                 </li>
                 <li>
                   <a class="sorting-groups-link" href="#">По типу</a>
@@ -161,8 +157,8 @@
                 </li>
               </ul>
               <div class="sorting-groups-markers">
-                <a class="sorting-groups-up" href="#" aria-label="Сортировка по возрастанию"></a>
-                <a class="sorting-groups-down sorting-marker-current" href="#" aria-label="Сортировка по убыванию"></a>
+                <a class="sorting-marker sorting-up" href="#" aria-label="Сортировка по возрастанию"></a>
+                <a class="sorting-marker sorting-down sorting-marker-current" aria-label="Сортировка по убыванию"></a>
               </div>
             </div>
             <div class="sorting-products">
@@ -221,10 +217,10 @@
                 </li>
               </ul>
               <div class="pagination">
-                <a class="pagination-link pagination-back">Назад</a>
+                <a class="pagination-link pagination-back pagination-disabled">Назад</a>
                 <ul class="pagination-pages">
                   <li>
-                    <a class="pagination-link pagination-pages-link pagination-pages-link-current" href="#">1</a>
+                    <a class="pagination-link pagination-pages-link pagination-pages-link-current">1</a>
                   </li>
                   <li>
                     <a class="pagination-link pagination-pages-link" href="#">2</a>
@@ -233,7 +229,7 @@
                     <a class="pagination-link pagination-pages-link" href="#">3</a>
                   </li>
                 </ul>
-                <a class="pagination-link pagination-forward" href="#">Вперед</a>
+                <a class="pagination-link pagination-next" href="#">Вперед</a>
               </div>
             </div>
           </section>
@@ -252,10 +248,10 @@
               <a class="footer-user-navigation-link footer-user-navigation-logout" href="blank.html">Выйти</a>
             </li>
             <li>
-              <a class="footer-user-navigation-link" href="blank.html">Сравнить</a>
+              <a class="footer-user-navigation-link footer-user-navigation-compare" href="blank.html">Сравнить</a>
             </li>
             <li>
-              <a class="footer-user-navigation-link" href="blank.html">Корзина</a>
+              <a class="footer-user-navigation-link footer-user-navigation-cart" href="blank.html">Корзина</a>
             </li>
           </ul>
         </div>
@@ -281,13 +277,13 @@
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="footer-social-link" href="#" aria-label="Фейсбук"></a>
+              <a class="footer-social-link footer-social-facebook" href="#" aria-label="Фейсбук"></a>
             </li>
             <li class="footer-social-item">
-              <a class="footer-social-link" href="#" aria-label="Инстаграм"></a>
+              <a class="footer-social-link footer-social-instagram" href="#" aria-label="Инстаграм"></a>
             </li>
             <li class="footer-social-item">
-              <a class="footer-social-link" href="#" aria-label="Твиттер"></a>
+              <a class="footer-social-link footer-social-twitter" href="#" aria-label="Твиттер"></a>
             </li>
           </ul>
         </section>
