@@ -5,7 +5,6 @@ const feedbackForm = feedbackPopup.querySelector('.modal-feedback-form');
 const feedbackName = feedbackPopup.querySelector('.modal-feedback-name');
 const feedbackEmail = feedbackPopup.querySelector('.modal-feedback-email');
 const feedbackText = feedbackPopup.querySelector('.modal-feedback-textarea');
-
 const mapLink = document.querySelector('.contacts-map-link');
 const mapPopup = document.querySelector('.modal-map');
 const mapClose = mapPopup.querySelector('.modal-close');
