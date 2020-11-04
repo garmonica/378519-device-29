@@ -68,8 +68,16 @@
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
       <section class="slider">
         <h2 class="visually-hidden">Подборка товаров</h2>
+        <input class="slider-input visually-hidden" type="radio" id="slider-toggle-1" name="toggle" checked>
+        <input class="slider-input visually-hidden" type="radio" id="slider-toggle-2" name="toggle">
+        <input class="slider-input visually-hidden" type="radio" id="slider-toggle-3" name="toggle">
+        <div class="slider-controls">
+          <label class="slider-label" for="slider-toggle-1" aria-label="Первый слайд"></label>
+          <label class="slider-label" for="slider-toggle-2" aria-label="Второй слайд"></label>
+          <label class="slider-label" for="slider-toggle-3" aria-label="Третий слайд"></label>
+        </div>
         <ul class="slider-list">
-          <li class="slider-item slider-item-stick slider-item-current">
+          <li class="slider-item slider-item-stick">
             <h3 class="visually-hidden">Селфи-палка</h3>
             <div class="slider-image-container">
               <img class="slider-image" src="img/slider-sticks.png" alt="Три селфи-палки длиной восемь метров" width="384" height="486">
@@ -133,11 +141,6 @@
             </div>
           </li>
         </ul>
-        <div class="slider-controls">
-          <a href="#" aria-label="Первый слайд"></a>
-          <a href="#" aria-label="Второй слайд"></a>
-          <a href="#" aria-label="Третий слайд"></a>
-        </div>
       </section>
       <section class="popular">
         <h2 class="visually-hidden">Популярные товары</h2>
