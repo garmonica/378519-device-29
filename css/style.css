@@ -359,7 +359,6 @@ img {
 
 .site-navigation-catalog {
   width: 505px;
-  cursor: pointer;
 }
 
 .site-navigation-item {
@@ -1573,7 +1572,7 @@ img {
 
 .sorting-marker-current,
 .sorting-marker-current:hover,
-.sorting-marker-currentr:focus,
+.sorting-marker-current:focus,
 .sorting-marker-current:active {
   opacity: 100%;
   cursor: default;
