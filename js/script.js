@@ -1,3 +1,17 @@
+let servicesButton = document.querySelectorAll('.services-button');
+
+servicesButton.forEach(function(elem, i) {
+  elem.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    let sliderScreenName = this.dataset.slider;
+    let sliderScreen = document.querySelector('.' + sliderScreenName);
+    document.querySelector('.services-item-current').classList.remove('services-item-current');
+    sliderScreen.classList.add('services-item-current');
+    document.querySelector('.services-button-active').classList.remove('services-button-active');
+    this.classList.add('services-button-active');
+  });
+});
+
 const contactsButton = document.querySelector('.contacts-button');
 const feedbackPopup = document.querySelector('.modal-feedback');
 const feedbackClose = feedbackPopup.querySelector('.modal-close');
