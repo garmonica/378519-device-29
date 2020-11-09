@@ -585,12 +585,10 @@ img {
   padding-right: 79px;
 }
 
-/* Slider on CSS */
-
 .slider-controls {
   display: flex;
   position: absolute;
-  right: 101px;
+  right: 102px;
   bottom: 156px;
   z-index: 2;
 }
@@ -599,8 +597,10 @@ img {
   display: block;
   width: 10px;
   height: 10px;
-  margin-left: 4px;
-  padding: 8px;
+  margin-left: 6px;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   position: relative;
 }
@@ -619,9 +619,7 @@ img {
   border-radius: 50%;
 }
 
-.slider-input:checked:nth-of-type(1) ~ .slider-controls .slider-label:nth-child(1)::after,
-.slider-input:checked:nth-of-type(2) ~ .slider-controls .slider-label:nth-child(2)::after,
-.slider-input:checked:nth-of-type(3) ~ .slider-controls .slider-label:nth-child(3)::after {
+.slider-label-active::after {
   content: "";
   width: 4px;
   height: 4px;
@@ -635,9 +633,7 @@ img {
   border-radius: 50%;
 }
 
-.slider-input:checked:nth-of-type(1) ~ .slider-list .slider-item:nth-child(1),
-.slider-input:checked:nth-of-type(2) ~ .slider-list .slider-item:nth-child(2),
-.slider-input:checked:nth-of-type(3) ~ .slider-list .slider-item:nth-child(3) {
+.slider-item-active {
   display: flex;
 }
 
@@ -1333,6 +1329,7 @@ img {
   border-radius: 50%;
   box-shadow: 0px 2px 2px var(--toggles-shadow);
   cursor: pointer;
+  box-sizing: content-box;
 }
 
 .filter-price-range .toggle-max {
@@ -1843,6 +1840,7 @@ img {
 
 .modal-feedback-textarea {
   height: 167px;
+  resize: none;
   margin-bottom: 45px;
 }
 

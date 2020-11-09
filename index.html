@@ -68,16 +68,13 @@
       <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
       <section class="slider">
         <h2 class="visually-hidden">Подборка товаров</h2>
-        <input class="slider-input visually-hidden" type="radio" id="slider-toggle-1" name="toggle" checked>
-        <input class="slider-input visually-hidden" type="radio" id="slider-toggle-2" name="toggle">
-        <input class="slider-input visually-hidden" type="radio" id="slider-toggle-3" name="toggle">
         <div class="slider-controls">
-          <label class="slider-label" for="slider-toggle-1" aria-label="Первый слайд"></label>
-          <label class="slider-label" for="slider-toggle-2" aria-label="Второй слайд"></label>
-          <label class="slider-label" for="slider-toggle-3" aria-label="Третий слайд"></label>
+          <button class="slider-label slider-label-active" data-screen="slider-item-stick" aria-label="Первый слайд"></button>
+          <button class="slider-label" data-screen="slider-item-watch" aria-label="Второй слайд"></button>
+          <button class="slider-label" data-screen="slider-item-quadrocopter" aria-label="Третий слайд"></button>
         </div>
         <ul class="slider-list">
-          <li class="slider-item slider-item-stick">
+          <li class="slider-item slider-item-stick slider-item-active">
             <h3 class="visually-hidden">Селфи-палка</h3>
             <div class="slider-image-container">
               <img class="slider-image" src="img/slider-sticks.png" alt="Три селфи-палки длиной восемь метров" width="384" height="486">
