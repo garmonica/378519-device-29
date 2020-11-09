@@ -2,16 +2,13 @@ let servicesButton = document.querySelectorAll('.services-button');
 
 const contactsButton = document.querySelector('.contacts-button');
 const feedbackPopup = document.querySelector('.modal-feedback');
-
 const feedbackClose = document.querySelector('.modal-feedback .modal-close');
 const feedbackForm = document.querySelector('.modal-feedback .modal-feedback-form');
 const feedbackName = document.querySelector('.modal-feedback .modal-feedback-name');
 const feedbackEmail = document.querySelector('.modal-feedback .modal-feedback-email');
 const feedbackText = document.querySelector('.modal-feedback .modal-feedback-textarea');
-
 const mapLink = document.querySelector('.contacts-map-link');
 const mapPopup = document.querySelector('.modal-map');
-
 const mapClose = document.querySelector('.modal-map .modal-close');
 
 let isStorageSupport = true;

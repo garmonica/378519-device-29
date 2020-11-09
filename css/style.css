@@ -1,5 +1,3 @@
-/** {outline: 1px solid deeppink;}*/
-
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
@@ -333,8 +331,6 @@ img {
 .user-navigation-link:active .user-navigation-link::before {
   opacity: 30%;
 }
-
-
 
 .user-navigation-logout {
   padding: 5px 17px;
